@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mahmoud ❤ Basbousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== FLOATING HEARTS CANVAS ===================== -->
+  <div id="heartsLayer" class="hearts-layer" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="logo">M <span class="logo-heart">❤</span>S</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link">البداية</a>
+        <a href="#letter" class="nav-link">رسالة ليكي</a>
+        <a href="#counter" class="nav-link">العداد</a>
+        <a href="#story" class="nav-link">حكايتنا</a>
+        <a href="#why" class="nav-link">ليه بسبوسة؟</a>
+        <a href="#gallery" class="nav-link">ذكريات</a>
+        <a href="#music" class="nav-link">الأغنية</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-gradient"></div>
+      <div class="hero-hearts" id="heroHearts" aria-hidden="true"></div>
+
+      <div class="hero-content reveal">
+        <div class="big-heart">
+          <svg viewBox="0 0 32 29" class="heart-svg">
+            <path d="M16 28.5C16 28.5 1 19.5 1 9.5C1 4.5 4.9 1 9.5 1C12.5 1 15 2.7 16 5C17 2.7 19.5 1 22.5 1C27.1 1 31 4.5 31 9.5C31 19.5 16 28.5 16 28.5Z"/>
+          </svg>
+        </div>
+
+        <h1 class="hero-title">Mahmoud <span class="heart-inline">❤</span> Basbousa</h1>
+
+        <p class="hero-subtitle">
+          حكاية صغيرة بين اتنين...<br />
+          بس بالنسبالي هي أجمل حكاية.
+        </p>
+
+        <p class="hero-small">من يوم ما بدأنا نتكلم، وكل ثانية بقت ليها حكاية ❤</p>
+
+        <button class="btn-primary" id="openLetterBtn">افتحي رسالتي ❤</button>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ===================== LOVE LETTER ===================== -->
+    <section class="section letter-section" id="letter">
+      <div class="section-inner reveal">
+        <h2 class="section-title">رسالة من محمود لبسبوسة ❤</h2>
+
+        <div class="glass-card letter-card">
+          <p id="letterText" class="letter-text"></p>
+          <span class="typing-cursor" id="typingCursor"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MUSIC PLAYER ===================== -->
+    <section class="section music-section" id="music">
+      <div class="section-inner reveal">
+        <h2 class="section-title">أغنية بتفكرني بيكي 🎵❤</h2>
+        <p class="section-subtitle">الأغنية دي اختارتها عشان كل مرة أسمعها تفتكريني بيكي ❤</p>
+
+        <div class="glass-card music-player">
+          <audio id="loveSong" src="كلمه.mp3" preload="metadata"></audio>
+
+          <div class="disc-wrapper">
+            <div class="disc" id="disc">
+              <div class="disc-center">🎵</div>
+            </div>
+            <div class="disc-glow" id="discGlow"></div>
+            <div class="music-hearts" id="musicHearts" aria-hidden="true"></div>
+          </div>
+
+          <button class="play-btn" id="playBtn">
+            <span id="playBtnText">شغلي الأغنية 🎵❤</span>
+          </button>
+
+          <div class="progress-wrapper">
+            <span class="time" id="currentTime">00:00</span>
+            <div class="progress-bar" id="progressBar">
+              <div class="progress-fill" id="progressFill"></div>
+              <div class="progress-thumb" id="progressThumb"></div>
+            </div>
+            <span class="time" id="duration">00:00</span>
+          </div>
+
+          <div class="volume-wrapper">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" class="volume-slider" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LIVE COUNTER ===================== -->
+    <section class="section counter-section" id="counter">
+      <div class="section-inner reveal">
+        <div class="counter-heart">❤</div>
+        <h2 class="section-title">بقالنا قد إيه بنتكلم؟ ❤</h2>
+        <p class="section-subtitle">
+          من يوم 20/7/2026 وإحنا بنتكلم...<br />
+          وكل ثانية معاكِ ليها معنى ❤
+        </p>
+
+        <div class="counter-grid">
+          <div class="counter-box glass-card">
+            <span class="counter-number" id="countDays">00</span>
+            <span class="counter-label">يوم</span>
+          </div>
+          <div class="counter-box glass-card">
+            <span class="counter-number" id="countHours">00</span>
+            <span class="counter-label">ساعة</span>
+          </div>
+          <div class="counter-box glass-card">
+            <span class="counter-number" id="countMinutes">00</span>
+            <span class="counter-label">دقيقة</span>
+          </div>
+          <div class="counter-box glass-card">
+            <span class="counter-number" id="countSeconds">00</span>
+            <span class="counter-label">ثانية</span>
+          </div>
+        </div>
+
+        <p class="counter-line">15 يوم كانوا مجرد بداية...<br />وإن شاء الله اللي جاي يكون أحلى بكتير يا بسبوسة ❤</p>
+        <p class="counter-line small">والعداد لسه بيعد... والحكاية لسه بتبدأ ❤</p>
+      </div>
+    </section>
+
+    <!-- ===================== OUR STORY / TIMELINE ===================== -->
+    <section class="section story-section" id="story">
+      <div class="section-inner reveal">
+        <h2 class="section-title">حكايتنا ❤</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-number">01</div>
+            <div class="timeline-content glass-card">
+              <h3>أول مرة اتكلمنا</h3>
+              <p>ومن هنا بدأت حكاية مكنتش عارف إنها هتبقى مهمة بالشكل ده.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-number">02</div>
+            <div class="timeline-content glass-card">
+              <h3>أول كلام كتير بينا</h3>
+              <p>كل كلام بينا كان بيخليني أحب وجودك أكتر.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-number">03</div>
+            <div class="timeline-content glass-card">
+              <h3>الذكريات الحلوة</h3>
+              <p>تفاصيل بسيطة، بس بالنسبالي ليها قيمة كبيرة.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-number">04</div>
+            <div class="timeline-content glass-card">
+              <h3>والحكاية لسه مستمرة</h3>
+              <p>إحنا لسه في البداية... ولسه في ذكريات كتير مستنيانا.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY BASBOUSA ===================== -->
+    <section class="section why-section" id="why">
+      <div class="section-inner reveal">
+        <h2 class="section-title">ليه بسبوسة مميزة؟ ❤</h2>
+
+        <div class="why-grid">
+          <div class="why-card glass-card">
+            <span class="why-icon">❤</span>
+            <h3>ضحكتك</h3>
+            <p>أحلى حاجة بتسمعها في يومي.</p>
+          </div>
+          <div class="why-card glass-card">
+            <span class="why-icon">💬</span>
+            <h3>طريقة كلامك</h3>
+            <p>كل كلمة بتقوليها ليها طعم مختلف.</p>
+          </div>
+          <div class="why-card glass-card">
+            <span class="why-icon">✨</span>
+            <h3>وجودك</h3>
+            <p>بيفرق معايا أكتر مما تتخيلي.</p>
+          </div>
+          <div class="why-card glass-card">
+            <span class="why-icon">🫶</span>
+            <h3>اهتمامك</h3>
+            <p>حاجة بسيطة بس بتفرق كتير.</p>
+          </div>
+          <div class="why-card glass-card">
+            <span class="why-icon">📸</span>
+            <h3>ذكرياتنا</h3>
+            <p>كل لحظة بينا بقت ليها مكان في قلبي.</p>
+          </div>
+          <div class="why-card glass-card">
+            <span class="why-icon">❤</span>
+            <h3>إنك إنتي</h3>
+            <p>مش محتاجة تتغيري في حاجة، إنتي كفاية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERACTIVE LOVE BUTTON ===================== -->
+    <section class="section interactive-section" id="interactive">
+      <div class="section-inner reveal">
+        <div class="interactive-heart" id="interactiveHeart">❤</div>
+        <h2 class="section-title">عاوزة تعرفي حاجة؟ ❤</h2>
+        <button class="btn-primary" id="loveRevealBtn">اضغطي هنا ❤</button>
+
+        <div class="hidden-message glass-card" id="hiddenMessage">
+          <p>ممكن أقول كلام كتير...</p>
+          <p>بس في الآخر هتفضل كلمة واحدة:</p>
+          <p class="highlight">بحبك يا بسبوسة ❤</p>
+        </div>
+
+        <div class="click-hearts" id="clickHearts" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SECRET ENVELOPE ===================== -->
+    <section class="section envelope-section" id="envelope">
+      <div class="section-inner reveal">
+        <h2 class="section-title">في رسالة سرية ليكي... 💌</h2>
+
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-el">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="envelope-letter">
+              <p>لو وصلتي لهنا، فمعنى كده إنك قريتي كل اللي كتبته...</p>
+              <p>وأنا بس حبيت أقولك إن وجودك في حياتي حاجة جميلة ومهمة بالنسبالي.</p>
+              <p>يمكن مش دايمًا بعرف أقول كل اللي جوايا، بس إنتي أكيد ليكي مكان خاص عندي.</p>
+              <p>يارب دايمًا أشوفك مبسوطة، وربنا يكتب لنا الخير والسعادة ❤</p>
+              <p class="highlight">بحبك يا بسبوسة.</p>
+            </div>
+          </div>
+          <button class="btn-primary" id="openEnvelopeBtn">افتحيها 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MEMORIES GALLERY ===================== -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-inner reveal">
+        <h2 class="section-title">ذكريات ❤</h2>
+        <p class="section-subtitle">استبدلي الصور دي بصوركوا الحقيقية من مجلد assets/images/</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory1.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>ذكرى جميلة ❤</p>
+            </div>
+          </div>
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory2.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>من أحلى اللحظات</p>
+            </div>
+          </div>
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory3.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>ضحكة مبتتنسيش</p>
+            </div>
+          </div>
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory4.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>يوم جميل</p>
+            </div>
+          </div>
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory5.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>تفصيلة صغيرة</p>
+            </div>
+          </div>
+          <div class="gallery-card glass-card">
+            <div class="gallery-img" style="background-image:url('assets/images/memory6.jpg')"></div>
+            <div class="gallery-overlay">
+              <span class="gallery-heart">❤</span>
+              <p>لسه في ذكريات أكتر</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROMANTIC QUOTES ===================== -->
+    <section class="section quotes-section" id="quotes">
+      <div class="section-inner reveal">
+        <div class="quote-box glass-card">
+          <button class="quote-arrow" id="prevQuote" aria-label="السابق">‹</button>
+          <p class="quote-text" id="quoteText"></p>
+          <button class="quote-arrow" id="nextQuote" aria-label="التالي">›</button>
+        </div>
+        <div class="quote-dots" id="quoteDots"></div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL MESSAGE ===================== -->
+    <section class="section final-section" id="final">
+      <div class="final-heart-bg" aria-hidden="true">❤</div>
+      <div class="final-particles" id="finalParticles" aria-hidden="true"></div>
+      <div class="section-inner reveal">
+        <h2 class="section-title">إلى بسبوسة ❤</h2>
+        <div class="glass-card final-card">
+          <p>يمكن الكلام مش دايمًا يعرف يوصف اللي جوا الإنسان،</p>
+          <p>بس حبيت أعملك حاجة بسيطة تفضل فاكرة بيها إن في حد بيحب وجودك في حياته وبيتمنى لك الخير والسعادة دايمًا.</p>
+          <p>إحنا بدأنا الكلام يوم 20/7/2026 الساعة 1:00 الظهر، والعداد من وقتها لسه بيعد.</p>
+          <p>15 يوم كانوا مجرد بداية، وإن شاء الله اللي جاي يكون أجمل وأحلى.</p>
+          <p>ويارب نفضل لبعض، وربنا يكتب لنا الخير، ولو لينا نصيب مع بعض يجمعنا في الحلال ❤</p>
+          <p class="highlight">بحبك أوي يا بسبوسة ❤</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer-logo">Mahmoud <span class="heart-inline">❤</span> Basbousa</p>
+    <p class="footer-subtitle">Our little story is still being written...</p>
+    <p class="footer-made">Made with ❤ by Mahmoud</p>
+    <p class="footer-copy">© 2026 Mahmoud &amp; Basbousa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
